@@ -139,6 +139,7 @@ function process() {
   var bcdlog = [0,0,0,0];
   var bcd_hits = parseInt(hits.toString(10), 16);
   var bcd_base = 0x100 * (stage+1);
+  if(stage == 9) bcd_base = 0x1000;
   var base = 100 * (stage + 1);
   if(last_bee) {
     bcd_base *= 2;
