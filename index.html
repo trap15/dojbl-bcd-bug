@@ -117,6 +117,9 @@ function bcd_normalize(v) {
     }
     val += thisval * (1 << (i*4));
   }
+  if(carry) {
+    val += 1 * (1 << (str.length * 4));
+  }
   return val;
 }
 
